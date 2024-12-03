@@ -1,11 +1,17 @@
-{% extends 'personal/base.html' %}
-{% block title %}About{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body>
 
-{% block content %}
-<h1>About Me</h1>
+<div id="header"></div>
+<div id="nav"></div>
 
-<!-- Introduction and Background -->
-<section>
+<main>
+    <section>
     <h2>Introduction and Background</h2>
     <p>
         My name is Julio Morales-Mena, and I was born and raised in Worcester, MA. Growing up in a community that valued perseverance and 
@@ -58,4 +64,29 @@
         include Physics and Economics, where I enjoy uncovering the theoretical and practical applications of these disciplines.
     </p>
 </section>
-{% endblock %}
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
