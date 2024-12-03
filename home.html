@@ -1,8 +1,17 @@
-{% extends 'personal/base.html' %}
-{% block title %}Home{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
 
-{% block content %}
-<h1>Welcome!</h1>
+<div id="header"></div>
+<div id="nav"></div>
+
+<main>
+    <h1>Welcome!</h1>
 <p>
     Hello and welcome! I'm thrilled to share this space with you where passion meets technology, 
     and ideas turn into impactful solutions. Here, you'll get a glimpse into my journey as a tech enthusiast 
@@ -18,4 +27,16 @@
     This site is a hub for my projects, professional experiences, and aspirations. Whether you're here to explore my work, 
     connect, or collaborate, I invite you to dive in and discover how I strive to make technology a tool for progress.
 </p>
-{% endblock %}
+</main>
+
+<div id="footer"></div>
+
+<script>
+    document.getElementById('header').innerHTML = fetch('header.html').then(res => res.text());
+    document.getElementById('nav').innerHTML = fetch('nav.html').then(res => res.text());
+    document.getElementById('footer').innerHTML = fetch('footer.html').then(res => res.text());
+</script>
+
+</body>
+</html>
+
