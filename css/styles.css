@@ -1,3 +1,4 @@
+/* Global body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,12 +6,16 @@ body {
     background-color: #f5f5f5;
     color: #333;
 }
+
+/* Header styling */
 header {
     background-color: #00509e;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
 }
+
+/* Navigation styling */
 nav ul {
     list-style: none;
     margin: 0;
@@ -18,13 +23,17 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 15px;
 }
+
 nav ul li a {
     text-decoration: none;
     color: #fff;
 }
+
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
@@ -33,17 +42,7 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Project styling */
+/* Project container styling */
 .project {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -60,6 +59,7 @@ footer {
     font-size: 1.1rem;
 }
 
+/* Screenshot styling */
 .project .screenshots {
     margin-top: 10px;
 }
@@ -72,18 +72,20 @@ footer {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
     .project {
         padding: 15px;
     }
+
     .project h2 {
         font-size: 1.5rem;
     }
 }
-
-/* Resize specific images by class or id */
-.project-image {
-    max-width: 300px; /* Adjust the size as needed */
-    height: auto;
-}
-
-
