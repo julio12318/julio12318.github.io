@@ -80,4 +80,16 @@ footer {
     }
 }
 
+/* Resize all images on the page */
+img {
+    max-width: 100%;  /* Ensures images scale down within their container */
+    height: auto;     /* Maintains the aspect ratio of the images */
+}
+
+/* Resize specific images by class or id */
+.project-image {
+    max-width: 300px; /* Adjust the size as needed */
+    height: auto;
+}
+
 
