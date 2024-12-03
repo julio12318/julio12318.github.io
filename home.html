@@ -12,31 +12,44 @@
 
 <main>
     <h1>Welcome!</h1>
-<p>
-    Hello and welcome! I'm thrilled to share this space with you where passion meets technology, 
-    and ideas turn into impactful solutions. Here, you'll get a glimpse into my journey as a tech enthusiast 
-    and aspiring innovator.
-</p>
-<p>
-    I'm Julio Morales-Mena, a Computer Science major and Data Science minor at Clark University in Worcester, MA. 
-    With expertise in Java, Python, Django, and Android Studio, I bring creativity and precision to web and mobile 
-    development. My passion for data science allows me to uncover patterns and tell stories through data, bridging 
-    insights across industries like economics, healthcare, and business.
-</p>
-<p>
-    This site is a hub for my projects, professional experiences, and aspirations. Whether you're here to explore my work, 
-    connect, or collaborate, I invite you to dive in and discover how I strive to make technology a tool for progress.
-</p>
+    <p>
+        Hello and welcome! I'm thrilled to share this space with you where passion meets technology, 
+        and ideas turn into impactful solutions. Here, you'll get a glimpse into my journey as a tech enthusiast 
+        and aspiring innovator.
+    </p>
+    <p>
+        I'm Julio Morales-Mena, a Computer Science major and Data Science minor at Clark University in Worcester, MA. 
+        With expertise in Java, Python, Django, and Android Studio, I bring creativity and precision to web and mobile 
+        development. My passion for data science allows me to uncover patterns and tell stories through data, bridging 
+        insights across industries like economics, healthcare, and business.
+    </p>
+    <p>
+        This site is a hub for my projects, professional experiences, and aspirations. Whether you're here to explore my work, 
+        connect, or collaborate, I invite you to dive in and discover how I strive to make technology a tool for progress.
+    </p>
 </main>
 
 <div id="footer"></div>
 
 <script>
-    document.getElementById('header').innerHTML = fetch('header.html').then(res => res.text());
-    document.getElementById('nav').innerHTML = fetch('nav.html').then(res => res.text());
-    document.getElementById('footer').innerHTML = fetch('footer.html').then(res => res.text());
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
 </script>
 
 </body>
 </html>
-
