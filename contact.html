@@ -1,8 +1,17 @@
-{% extends 'personal/base.html' %}
-{% block title %}Contact{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<body>
 
-{% block content %}
-<h1>Contact Me</h1>
+<div id="header"></div>
+<div id="nav"></div>
+
+<main>
+   <h1>Contact Me</h1>
 <p>If you'd like to get in touch, feel free to use the following methods:</p>
 
 <ul>
@@ -17,4 +26,29 @@
 </ul>
 
 <p>I look forward to hearing from you!</p>
-{% endblock %}
+</main>
+
+<div id="footer"></div>
+
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        });
+
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav').innerHTML = data;
+        });
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
